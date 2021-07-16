@@ -1,0 +1,78 @@
+name: RevaApp
+configs:
+  Debug: debug
+  Release: release
+targetTemplates:
+  RevaAppBase:
+    type: application
+    platform: iOS
+    deploymentTarget: 10.0
+    scheme:
+      testTargets:
+        - RevaAppTests
+      gatherCoverageData: true
+    sources:
+      - path: RevaApp
+        excludes:
+          - "**/*.md" # excludes all files with the .md extension
+    settings:
+      base:
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        CODE_SIGN_STYLE: Manual
+        MARKETING_VERSION: 1.0.0
+        SWIFT_VERSION: 5.2
+        SWIFT_OPTIMIZATION_LEVEL: "-Onone"
+        TARGETED_DEVICE_FAMILY: 1
+        DEVELOPMENT_TEAM: ""
+        ENABLE_BITCODE: false
+        LIBRARY_SEARCH_PATHS:
+          - "$(inherited)"
+          - "$(PROJECT_DIR)/RevaApp"
+    # In case need any dependencies
+    # dependencies:
+    #   - sdk: UIKit.framework
+    #   - framework: AnyFramework.framework
+    #     embed: false
+    #     link: true
+    #     codeSign: false
+    postBuildScripts:
+      - script: |
+                echo "post build scripts"
+        name: "Echo Post Build Scripts"
+targets:
+  RevaApp:
+    templates:
+      - RevaAppBase
+    settings:
+      base:
+        INFOPLIST_FILE: RevaApp/Common/Plist/Production/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: revaapp.sample
+  RevaApp-STAGE:
+    templates:
+      - RevaAppBase
+    settings:
+      base:
+        INFOPLIST_FILE: RevaApp/Common/Plist/Stage/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: revaapp.sample.stage
+      configs:
+        Debug:
+          SWIFT_ACTIVE_COMPILATION_CONDITIONS: STAGE DEBUG
+        Release:
+          SWIFT_ACTIVE_COMPILATION_CONDITIONS: STAGE
+  RevaAppTests:
+    type: bundle.unit-test
+    platform: iOS
+    deploymentTarget: "10.0"
+    dependencies:
+      - target: RevaApp
+    settings:
+      CODE_SIGN_STYLE: Manual
+      SWIFT_VERSION: "5.2"
+      INFOPLIST_FILE: RevaAppTests/Info.plist
+      TEST_HOST: $(BUILT_PRODUCTS_DIR)/RevaApp.app/RevaApp
+    scheme: 
+      testTargets:
+        - RevaAppTests
+      gatherCoverageData: true
+    sources:
+      - path: RevaAppTests
