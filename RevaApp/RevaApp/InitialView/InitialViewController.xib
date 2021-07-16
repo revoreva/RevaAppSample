@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment version="4112" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -12,16 +12,17 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InitialViewController" customModule="RevaApp" customModuleProvider="target">
             <connections>
                 <outlet property="environmentLabel" destination="DRV-bq-QDv" id="7wi-Yy-ZOb"/>
+                <outlet property="featureAButton" destination="mRE-ky-ljh" id="erI-0B-i7H"/>
                 <outlet property="view" destination="iN0-l3-epB" id="7r9-3X-XtH"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Environment: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRV-bq-QDv">
-                    <rect key="frame" x="16" y="84" width="382" height="21"/>
+                    <rect key="frame" x="16" y="40" width="288" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="3zR-R7-KSK"/>
                     </constraints>
@@ -29,13 +30,27 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRE-ky-ljh">
+                    <rect key="frame" x="16" y="161" width="288" height="65"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="65" id="cB1-NS-nkh"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                    <state key="normal" title="Go to Feature A"/>
+                    <connections>
+                        <action selector="featureATapped:" destination="-1" eventType="touchUpInside" id="Bc2-AQ-TCP"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="DRV-bq-QDv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="dAa-cZ-XZm"/>
+                <constraint firstItem="mRE-ky-ljh" firstAttribute="top" secondItem="DRV-bq-QDv" secondAttribute="bottom" constant="100" id="fiI-R1-fUp"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="DRV-bq-QDv" secondAttribute="trailing" constant="16" id="mJB-Gw-ptA"/>
                 <constraint firstItem="DRV-bq-QDv" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="40" id="nY2-OM-q93"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="mRE-ky-ljh" secondAttribute="trailing" constant="16" id="skl-v9-Eaf"/>
+                <constraint firstItem="mRE-ky-ljh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="swf-gY-GD8"/>
             </constraints>
             <point key="canvasLocation" x="38" y="109"/>
         </view>

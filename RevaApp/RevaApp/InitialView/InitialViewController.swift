@@ -9,6 +9,7 @@ import UIKit
 
 class InitialViewController: UIViewController {
     @IBOutlet weak var environmentLabel: UILabel!
+    @IBOutlet weak var featureAButton: UIButton!
     
     init() {
         super.init(nibName: "InitialViewController", bundle: nil)
@@ -22,6 +23,9 @@ class InitialViewController: UIViewController {
         super.viewDidLoad()
         
         setupView()
+    }
+    @IBAction func featureATapped(_ sender: Any) {
+        FeatureAWireframe().show(from: navigationController)
     }
 }
 
