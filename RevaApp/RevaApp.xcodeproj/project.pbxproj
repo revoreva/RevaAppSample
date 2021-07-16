@@ -27,6 +27,8 @@
 		B782F03326A1653C00FF9516 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B782EFE326A13C4100FF9516 /* Assets.xcassets */; };
 		B782F03826A16F1A00FF9516 /* RevaNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782F03726A16F1A00FF9516 /* RevaNavigationBar.swift */; };
 		B782F03926A16F1A00FF9516 /* RevaNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782F03726A16F1A00FF9516 /* RevaNavigationBar.swift */; };
+		B782F04026A19AF000FF9516 /* FeatureBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782F03F26A19AF000FF9516 /* FeatureBViewController.swift */; };
+		B782F04126A19AF000FF9516 /* FeatureBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782F03F26A19AF000FF9516 /* FeatureBViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,7 @@
 		B782F02F26A1610700FF9516 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B782F03126A1610700FF9516 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B782F03726A16F1A00FF9516 /* RevaNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevaNavigationBar.swift; sourceTree = "<group>"; };
+		B782F03F26A19AF000FF9516 /* FeatureBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureBViewController.swift; sourceTree = "<group>"; };
 		BAB4D9AD6EDA431FA4413705 /* Pods_RevaAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RevaAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC785FCA7D51BB489D90CF69 /* Pods-RevaApp-STAGE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RevaApp-STAGE.release.xcconfig"; path = "Target Support Files/Pods-RevaApp-STAGE/Pods-RevaApp-STAGE.release.xcconfig"; sourceTree = "<group>"; };
 		BF7BD4D360DCEECE49E6E680 /* Pods_RevaApp_STAGE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RevaApp_STAGE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +128,7 @@
 		B782EFD926A13C4000FF9516 /* RevaApp */ = {
 			isa = PBXGroup;
 			children = (
+				B782F03E26A19ADC00FF9516 /* FeatureB */,
 				B782F02B26A14FB000FF9516 /* InitialView */,
 				B782F02426A1400D00FF9516 /* Common */,
 				B782EFDA26A13C4000FF9516 /* AppDelegate.swift */,
@@ -194,6 +198,14 @@
 				B782F03726A16F1A00FF9516 /* RevaNavigationBar.swift */,
 			);
 			path = NavigationView;
+			sourceTree = "<group>";
+		};
+		B782F03E26A19ADC00FF9516 /* FeatureB */ = {
+			isa = PBXGroup;
+			children = (
+				B782F03F26A19AF000FF9516 /* FeatureBViewController.swift */,
+			);
+			path = FeatureB;
 			sourceTree = "<group>";
 		};
 		CCCDCDFE4BF79DD67161487E /* Frameworks */ = {
@@ -482,6 +494,7 @@
 				B782EFDF26A13C4000FF9516 /* InitialViewController.swift in Sources */,
 				B782F03826A16F1A00FF9516 /* RevaNavigationBar.swift in Sources */,
 				B782F02626A1402900FF9516 /* RevaNavigationController.swift in Sources */,
+				B782F04026A19AF000FF9516 /* FeatureBViewController.swift in Sources */,
 				B782EFDB26A13C4000FF9516 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -501,6 +514,7 @@
 				B782F02326A13E6D00FF9516 /* InitialViewController.swift in Sources */,
 				B782F03926A16F1A00FF9516 /* RevaNavigationBar.swift in Sources */,
 				B782F02726A1402A00FF9516 /* RevaNavigationController.swift in Sources */,
+				B782F04126A19AF000FF9516 /* FeatureBViewController.swift in Sources */,
 				B782F02226A13E6A00FF9516 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
