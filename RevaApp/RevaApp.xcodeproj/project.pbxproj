@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -25,10 +25,19 @@
 		B782F02C26A1548000FF9516 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B782EFE026A13C4000FF9516 /* Main.storyboard */; };
 		B782F03226A164FB00FF9516 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B782EFE526A13C4100FF9516 /* LaunchScreen.storyboard */; };
 		B782F03326A1653C00FF9516 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B782EFE326A13C4100FF9516 /* Assets.xcassets */; };
+		B782F03826A16F1A00FF9516 /* RevaNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782F03726A16F1A00FF9516 /* RevaNavigationBar.swift */; };
+		B782F03926A16F1A00FF9516 /* RevaNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782F03726A16F1A00FF9516 /* RevaNavigationBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		B782EFEE26A13C4200FF9516 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B782EFCF26A13C4000FF9516 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B782EFD626A13C4000FF9516;
+			remoteInfo = RevaApp;
+		};
+		B782F03426A16D3400FF9516 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B782EFCF26A13C4000FF9516 /* Project object */;
 			proxyType = 1;
@@ -57,6 +66,7 @@
 		B782F02826A14FAA00FF9516 /* InitialViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InitialViewController.xib; sourceTree = "<group>"; };
 		B782F02F26A1610700FF9516 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B782F03126A1610700FF9516 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B782F03726A16F1A00FF9516 /* RevaNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevaNavigationBar.swift; sourceTree = "<group>"; };
 		BAB4D9AD6EDA431FA4413705 /* Pods_RevaAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RevaAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC785FCA7D51BB489D90CF69 /* Pods-RevaApp-STAGE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RevaApp-STAGE.release.xcconfig"; path = "Target Support Files/Pods-RevaApp-STAGE/Pods-RevaApp-STAGE.release.xcconfig"; sourceTree = "<group>"; };
 		BF7BD4D360DCEECE49E6E680 /* Pods_RevaApp_STAGE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RevaApp_STAGE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,9 +146,9 @@
 		B782F02426A1400D00FF9516 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				B782F03626A16F0100FF9516 /* NavigationView */,
 				B782EFE326A13C4100FF9516 /* Assets.xcassets */,
 				B782F02D26A1610700FF9516 /* Plist */,
-				B782F02526A1402900FF9516 /* RevaNavigationController.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -175,6 +185,15 @@
 				B782F03126A1610700FF9516 /* Info.plist */,
 			);
 			path = Stage;
+			sourceTree = "<group>";
+		};
+		B782F03626A16F0100FF9516 /* NavigationView */ = {
+			isa = PBXGroup;
+			children = (
+				B782F02526A1402900FF9516 /* RevaNavigationController.swift */,
+				B782F03726A16F1A00FF9516 /* RevaNavigationBar.swift */,
+			);
+			path = NavigationView;
 			sourceTree = "<group>";
 		};
 		CCCDCDFE4BF79DD67161487E /* Frameworks */ = {
@@ -255,6 +274,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				B782F03526A16D3400FF9516 /* PBXTargetDependency */,
 			);
 			name = "RevaApp-STAGE";
 			productName = "RevaApp-STAGE";
@@ -296,8 +316,8 @@
 			projectRoot = "";
 			targets = (
 				B782EFD626A13C4000FF9516 /* RevaApp */,
-				B782EFEC26A13C4200FF9516 /* RevaAppTests */,
 				B782F00D26A13E2800FF9516 /* RevaApp-STAGE */,
+				B782EFEC26A13C4200FF9516 /* RevaAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -460,6 +480,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B782EFDF26A13C4000FF9516 /* InitialViewController.swift in Sources */,
+				B782F03826A16F1A00FF9516 /* RevaNavigationBar.swift in Sources */,
 				B782F02626A1402900FF9516 /* RevaNavigationController.swift in Sources */,
 				B782EFDB26A13C4000FF9516 /* AppDelegate.swift in Sources */,
 			);
@@ -478,6 +499,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B782F02326A13E6D00FF9516 /* InitialViewController.swift in Sources */,
+				B782F03926A16F1A00FF9516 /* RevaNavigationBar.swift in Sources */,
 				B782F02726A1402A00FF9516 /* RevaNavigationController.swift in Sources */,
 				B782F02226A13E6A00FF9516 /* AppDelegate.swift in Sources */,
 			);
@@ -488,8 +510,14 @@
 /* Begin PBXTargetDependency section */
 		B782EFEF26A13C4200FF9516 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = B782EFD626A13C4000FF9516 /* RevaApp */;
 			targetProxy = B782EFEE26A13C4200FF9516 /* PBXContainerItemProxy */;
+		};
+		B782F03526A16D3400FF9516 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B782EFD626A13C4000FF9516 /* RevaApp */;
+			targetProxy = B782F03426A16D3400FF9516 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -681,7 +709,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = GMD9X7E44J;
 				INFOPLIST_FILE = RevaAppTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -690,7 +718,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ovo.RevaAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RevaApp.app/RevaApp";
 			};
 			name = Debug;
@@ -704,7 +732,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = GMD9X7E44J;
 				INFOPLIST_FILE = RevaAppTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -713,7 +741,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ovo.RevaAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RevaApp.app/RevaApp";
 			};
 			name = Release;
