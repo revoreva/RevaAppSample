@@ -14,10 +14,10 @@ build/
 DerivedData/
 
 ## Project generated
-#RevaApp.xcodeproj
+RevaApp.xcodeproj
 
 # Add this line if you want to avoid checking in source code from the Xcode workspace
-#RevaApp.xcworkspace
+RevaApp.xcworkspace
 
 *.moved-aside
 *.pbxuser
